@@ -1,7 +1,6 @@
 const inquirer = require("inquirer");
-const util = require("./src/utils/generateMarkdown")
+const util = require("./utils/generateMarkdown")
 const fs = require("fs");
-
 
 inquirer
     .prompt([
@@ -57,10 +56,15 @@ inquirer
     .then(function (response) {
         let readmeContent = "";
         readmeContent += util.generateTitle();
-        readmeContent += util.generateLicence();
+        readmeContent += util.generateLicenseBadge();
         readmeContent += util.generateDescription();
-        readmeContent += util.generateDespendencies();
-        readmeContent += util.generateTest();
+        readmeContent += util.generateTableOfContents();
+        readmeContent += util.generateInstallation();
+        readmeContent += util.generateUsage();
+        readmeContent += util.generateLicense();
+        readmeContent += util.generateContributing();
+        readmeContent += util.generateTests();
+        readmeContent += util.generateQuestions();
         
         fs.writeFile("README.md", readmeContent, function (err) {
             if (err) throw err;

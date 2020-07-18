@@ -2,16 +2,31 @@ module.exports = {
     generateTitle: function () {
         
     },
+    generateLicenseBadge: function () {
+        
+    },
     generateDescription: function () {
 
     },
-    generateDespendencies: function () {
+    generateTableOfContents: function () {
 
     },
-    generateTest: function () {
+    generateInstallation: function () {
 
     },
-    generateLicence: function () {
+    generateUsage: function () {
+
+    },
+    generateLicense: function () {
+
+    },
+    generateContributing: function () {
+
+    },
+    generateTests: function () {
+
+    },
+    generateQuestions: function () {
 
     },
 }
