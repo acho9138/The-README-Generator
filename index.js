@@ -40,7 +40,7 @@ inquirer
             type: "input",
             message: "What command should be run to run tests",
             name: "tests",
-            default: "npm test"
+            default: "npm run test"
         },
         {
             type: "input",
@@ -55,16 +55,16 @@ inquirer
     ])
     .then(function (response) {
         let readmeContent = "";
-        readmeContent += util.generateTitle();
-        readmeContent += util.generateLicenseBadge();
-        readmeContent += util.generateDescription();
+        readmeContent += util.generateTitle(response.title);
+        readmeContent += util.generateLicenseBadge(response.license);
+        readmeContent += util.generateDescription(response.description);
         readmeContent += util.generateTableOfContents();
-        readmeContent += util.generateInstallation();
-        readmeContent += util.generateUsage();
-        readmeContent += util.generateLicense();
-        readmeContent += util.generateContributing();
-        readmeContent += util.generateTests();
-        readmeContent += util.generateQuestions();
+        readmeContent += util.generateInstallation(response.installation);
+        readmeContent += util.generateUsage(response.usage);
+        readmeContent += util.generateLicense(response.license);
+        readmeContent += util.generateContributing(response.contributing);
+        readmeContent += util.generateTests(response.tests);
+        readmeContent += util.generateQuestions(response.username, response.email);
         
         fs.writeFile("README.md", readmeContent, function (err) {
             if (err) throw err;
