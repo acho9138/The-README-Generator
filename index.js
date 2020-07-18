@@ -1,4 +1,7 @@
 const inquirer = require("inquirer");
+const util = require("./src/utils/generateMarkdown")
+const fs = require("fs");
+
 
 inquirer
     .prompt([
@@ -52,5 +55,16 @@ inquirer
         },
     ])
     .then(function (response) {
+        let readmeContent = "";
+        readmeContent += util.generateTitle();
+        readmeContent += util.generateLicence();
+        readmeContent += util.generateDescription();
+        readmeContent += util.generateDespendencies();
+        readmeContent += util.generateTest();
         
+        fs.writeFile("README.md", readmeContent, function (err) {
+            if (err) throw err;
+            console.log("Your README file is generated");
+        });
     });
+
