@@ -68,7 +68,6 @@ inquirer
         
         fs.writeFile("README.md", readmeContent, function (err) {
             if (err) throw err;
-            console.log("Your README file is generated");
+            console.log("Your README file was successfully generated");
         });
     });
-
