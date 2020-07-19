@@ -1,3 +1,4 @@
+// Functions to return README content with user inputs
 const generateTitle = (title) => (
 `# ${title}
 
@@ -75,6 +76,7 @@ const generateQuestions = (username, email) => (
 If you have any questions about the repo, open an issue or want to discuss, contact me directly at ${email}.
 You can find more of my work at [${username}](https://github.com/${username}/.).`);
 
+// Export to index.js
 module.exports = {
     generateTitle: generateTitle,
     generateLicenseBadge: generateLicenseBadge,
