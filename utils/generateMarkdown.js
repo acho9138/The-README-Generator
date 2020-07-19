@@ -73,7 +73,7 @@ const generateQuestions = (username, email) => (
 `## Questions
 
 If you have any questions about the repo, open an issue or want to discuss, contact me directly at ${email}.
-You can find more of my work at [${username}](https://github.com/${username}/.)`);
+You can find more of my work at [${username}](https://github.com/${username}/.).`);
 
 module.exports = {
     generateTitle: generateTitle,
