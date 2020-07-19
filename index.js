@@ -66,7 +66,7 @@ inquirer
         readmeContent += util.generateTests(response.tests);
         readmeContent += util.generateQuestions(response.username, response.email);
         
-        fs.writeFile("README-example.md", readmeContent, function (err) {
+        fs.writeFile("README.md", readmeContent, function (err) {
             if (err) throw err;
             console.log("Your README file was successfully generated");
         });
