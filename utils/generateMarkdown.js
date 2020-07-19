@@ -87,4 +87,3 @@ module.exports = {
     generateTests: generateTests,
     generateQuestions: generateQuestions
 }
-
