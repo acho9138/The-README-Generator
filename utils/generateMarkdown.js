@@ -1,45 +1,90 @@
-module.exports = {
-    generateTitle: function (title) {
-        return `# ${title}\n\n`;
-    },
-    generateLicenseBadge: function (license) {
-        return `![GitHub License](https://img.shields.io/badge/License-${license}-blue.svg)\n\n`;
-    },
-    generateDescription: function (description) {
-        return `## Description\n\n${description}\n\n`;
-    },
-    generateTableOfContents: function () {
-        return `## Table of Contents\n
+const generateTitle = (title) => (
+`# ${title}
+
+`);
+
+const generateLicenseBadge = (license) => (
+`![GitHub License](https://img.shields.io/badge/License-${license.replace(" ", "%20")}-blue.svg)
+
+`);
+
+const generateDescription = (description) => (
+`## Description
+
+${description}
+
+`);
+
+const generateTableOfContents = () => (
+`## Table of Contents
+
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
-* [Questions](#questions)\n\n`;
-    },
-    generateInstallation: function (installation) {
-        return `## Installation\n\nTo install the necessary dependencies, run the following command:
+* [Questions](#questions)
+
+`);
+
+const generateInstallation = (installation) => (
+`## Installation
+
+To install the necessary dependencies, run the following command:
+
 \`\`\`
 ${installation}
-\`\`\`\n\n`;
-    },
-    generateUsage: function (usage) {
-        return `## Usage\n\n${usage}\n\n`;
-    },
-    generateLicense: function (license) {
-        return `## License\n\nThis project is licensed under the ${license} license.\n\n`;
-    },
-    generateContributing: function (contributing) {
-        return `## Contributing\n\n${contributing}\n\n`;
-    },
-    generateTests: function (tests) {
-        return `## Tests\n\nTo run tests, run the following command:
+\`\`\`
+
+`);
+
+const generateUsage = (usage) => (
+`## Usage
+
+${usage}
+
+`);
+
+const generateLicense = (license) => (
+`## License
+
+This project is licensed under the ${license} license.
+
+`);
+
+const generateContributing = (contributing) => (
+`## Contributing
+
+${contributing}
+
+`);
+
+const generateTests = (tests) => (
+`## Tests
+
+To run tests, run the following command:
 \`\`\`
 ${tests}
-\`\`\`\n\n`;
-    },
-    generateQuestions: function (username, email) {
-        return `## Questions\n\nIf you have any questions about the repo, open an issue or want to discuss, contact me directly at ${email}.
-You can find more of my work at [${username}](https://github.com/${username}/.)`;
-    },
+\`\`\`
+
+`);
+
+const generateQuestions = (username, email) => (
+`## Questions
+
+If you have any questions about the repo, open an issue or want to discuss, contact me directly at ${email}.
+You can find more of my work at [${username}](https://github.com/${username}/.)`);
+
+module.exports = {
+    generateTitle: generateTitle,
+    generateLicenseBadge: generateLicenseBadge,
+    generateDescription: generateDescription,
+    generateTableOfContents: generateTableOfContents,
+    generateInstallation: generateInstallation,
+    generateUsage: generateUsage,
+    generateLicense: generateLicense,
+    generateContributing: generateContributing,
+    generateTests: generateTests,
+    generateQuestions: generateQuestions
 }
+
