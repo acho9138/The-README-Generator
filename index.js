@@ -57,7 +57,6 @@ const questions = [
 inquirer
     .prompt(questions)
     .then(function (response) {
-        // Construct README content to write to file
         let readmeContent = "";
         readmeContent += util.generateTitle(response.title);
         readmeContent += util.generateLicenseBadge(response.license);
@@ -69,7 +68,7 @@ inquirer
         readmeContent += util.generateContributing(response.contributing);
         readmeContent += util.generateTests(response.tests);
         readmeContent += util.generateQuestions(response.username, response.email);
-        // Create README file with user input
+
         if (response.title !== "" && response.license !== "" && response.description !== "" && response.installation !== "" && response.usage !== "" && response.contributing !== "" && response.tests !== "" && response.username !== "" && response.email !== "") {
             fs.writeFile("README.md", readmeContent, function (err) {
                 if (err) throw err;
