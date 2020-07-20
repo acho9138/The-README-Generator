@@ -78,14 +78,14 @@ You can find more of my work at [${username}](https://github.com/${username}/.).
 
 // Export to index.js
 module.exports = {
-    generateTitle: generateTitle,
-    generateLicenseBadge: generateLicenseBadge,
-    generateDescription: generateDescription,
-    generateTableOfContents: generateTableOfContents,
-    generateInstallation: generateInstallation,
-    generateUsage: generateUsage,
-    generateLicense: generateLicense,
-    generateContributing: generateContributing,
-    generateTests: generateTests,
-    generateQuestions: generateQuestions
+    generateTitle,
+    generateLicenseBadge,
+    generateDescription,
+    generateTableOfContents,
+    generateInstallation,
+    generateUsage,
+    generateLicense,
+    generateContributing,
+    generateTests,
+    generateQuestions
 }
