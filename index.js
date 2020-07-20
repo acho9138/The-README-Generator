@@ -70,7 +70,7 @@ inquirer
         readmeContent += util.generateTests(response.tests);
         readmeContent += util.generateQuestions(response.username, response.email);
         // Write file with README content
-        if (response.title !== "" && response.license !== "" && response.description !== "" && response.installation !== "" && response.usage !== "" && response.contributing !== "" && response.tests !== "" && response.username !== "" && response.email !== "") {
+        if (response.title && response.license && response.description && response.installation && response.usage && response.contributing && response.tests && response.username && response.email) {
             fs.writeFile("README.md", readmeContent, function (err) {
                 if (err) throw err;
                 console.log("Your README file was successfully generated");
