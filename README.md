@@ -43,7 +43,7 @@ If you have any questions about the repo, open an issue or want to discuss, cont
 
 ## Credits
 
-Thank you to the following resources to help make this day planner possible:
+Thank you to the following resources to help make this app possible:
 
 - The Coding Bootcamp at University of Sydney
 - MDN
