@@ -11,8 +11,6 @@ A CLI app which generates a README file using the inputs entered by the user.
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-* [Contributing](#contributing)
-* [Tests](#tests)
 * [Questions](#questions)
 
 ## Installation
